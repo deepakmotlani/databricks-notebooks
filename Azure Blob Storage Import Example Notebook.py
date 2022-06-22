@@ -17,12 +17,14 @@
 
 storage_account_name = "deepakmotlanistorage"
 storage_account_access_key = "<ACCESS-KEY>"
+container_name="data"
+file_path="movies.csv"
 
 # COMMAND ----------
 
 #https://deepakmotlanistorage.blob.core.windows.net/data/movies.csv
 #wasbs://data@deepakmotlanistorage.blob.core.windows.net/data/movies.csv
-file_location = "wasbs://data@deepakmotlanistorage.blob.core.windows.net/movies.csv"
+file_location = "wasbs://"+container_name+"@"+storage_account_name+".blob.core.windows.net/"+file_path
 file_type = "csv"
 
 # COMMAND ----------
